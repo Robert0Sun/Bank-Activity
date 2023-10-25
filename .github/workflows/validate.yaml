@@ -8,9 +8,7 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    default:
-    run:
-        working-directory: ./bank-activity-lab/
+  
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
