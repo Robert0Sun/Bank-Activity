@@ -10,7 +10,7 @@ class StockData:
         self.data = None
 
     def load(self):
-        """A function to assing the csv dataset to a list of lists.
+        """A function to adding the csv dataset to a list of lists.
         Does not include headers.
 
         All data is expected to be a string

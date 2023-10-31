@@ -14,18 +14,39 @@ class StockMetrics(StockData):
         self.load()
 
     def average01(self):
-        """pt1
-        """
+        
         averages = []
         for row in self.data:
-            ...
-
+            y = []
+            data_row = row[1:]
+            for x in data_row:
+                try:
+                    y.append(float(x))
+                except: ValueError
+                
+                continue
+            
+            averages.append(round(stats.mean(y),3))
         return averages
 
     def median02(self):
-        """pt2
-        """
-        ...
+
+        median = []
+        for row in self.data:
+            y = []
+            data_row = row[1:]
+            for x in data_row:
+                try:
+                    y.append(float(x))
+                except: ValueError
+                
+                continue
+            
+            self.data_sorted = sorted(self.data)
+            
+            median.append(round(stats.median(y)))
+        return median
+    print(StockData)
 
     def stddev03(self):
         """pt3
